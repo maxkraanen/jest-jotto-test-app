@@ -1,6 +1,7 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-export default function Congrats(props) {
+function Congrats(props) {
   const { success } = props;
 
   const getCongratsMessage = (
@@ -13,3 +14,9 @@ export default function Congrats(props) {
     </div>
   );
 }
+
+Congrats.propTypes = {
+  success: PropTypes.bool.isRequired,
+};
+
+export default Congrats;
