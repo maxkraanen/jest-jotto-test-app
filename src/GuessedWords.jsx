@@ -6,7 +6,15 @@ function GuessedWords(props) {
 
   const displayInitial = <div data-test="display-initial">Make a guess</div>;
 
-  const displayGuessedWords = <div data-test="display-guesses"></div>;
+  const displayGuessedWords = (
+    <div data-test="guessed-section">
+      {guessedWords.map((guess, index) => (
+        <div data-test="guessed-word" key={index}>
+          {guess.guessedWord}
+        </div>
+      ))}
+    </div>
+  );
 
   return (
     <div data-test="component-guessedwords">
