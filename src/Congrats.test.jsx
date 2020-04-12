@@ -7,7 +7,7 @@ import Congrats from "./Congrats";
 const defaultProps = { success: false };
 
 const setup = (props = {}) => {
-  const setupProps = { ...defaultProps, ...props };
+  const setupProps = { ...defaultProps, ...props }; // props overwrites defaultProps by doing this
   return shallow(<Congrats {...setupProps} />);
 };
 
