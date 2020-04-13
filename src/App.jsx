@@ -3,6 +3,8 @@ import { Provider } from "react-redux";
 
 import GuessedWords from "./GuessedWords";
 import Congrats from "./Congrats";
+import Input from "./Input";
+
 import store from "./configureStore";
 
 import "./App.css";
@@ -18,7 +20,8 @@ function App() {
       <div className="App">
         <h1>Jotto</h1>
         <p>Guess the word</p>
-        <Congrats success={false} />
+        {/* <Congrats success={false} /> */}
+        <Input />
         <GuessedWords guessedWords={guessedWords} />
       </div>
     </Provider>
